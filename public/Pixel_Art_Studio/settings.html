@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Pixel Art Studio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="app-mode">
+    
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+        <div class="nav-brand">
+            <i class="fa-solid fa-palette"></i> Pixel Art Studio
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="studio.html">Studio</a>
+            <a href="settings.html" class="active">Settings</a>
+        </div>
+    </nav>
+
+    <div class="app-layout">
+        <main class="settings-workspace">
+            
+            <header class="settings-header">
+                <h2>Workspace Configuration</h2>
+            </header>
+
+            <div class="settings-content">
+                
+                <div class="settings-card">
+                    <h3><i class="fa-solid fa-border-all"></i> Grid Settings</h3>
+                    
+                    <div class="setting-group">
+                        <label>Grid Line Color</label>
+                        <input type="color" id="setting-grid-color" value="#000000">
+                    </div>
+                    
+                </div>
+
+                <div class="settings-actions">
+                    <button id="btn-reset-settings" class="btn btn-secondary">Restore Defaults</button>
+                </div>
+
+            </div>
+            
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web-based Pixel Art Studio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="landing-page">
+    
+    <div class="landing-container">
+        <header class="landing-header">
+            <div class="logo-icon"><i class="fa-solid fa-palette"></i></div>
+            <h1>Pixel Art Studio</h1>
+            <p class="subtitle">A full-featured pixel editor powered by Computer Science.</p>
+        </header>
+
+        <div class="features-section">
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-paintbrush"></i></div>
+                <h3>Grid-based Drawing</h3>
+                <p>A responsive HTML5 Canvas mapped perfectly to 16x16, 32x32, or 64x64 grids, converting fluid mouse movements into crisp, aliased pixel art.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-fill-drip"></i></div>
+                <h3>Flood Fill Algorithm</h3>
+                <p>The Paint Bucket tool uses a robust Breadth-First Search (BFS) algorithm to traverse the raw `ImageData` Uint8ClampedArray, filling contiguous areas instantly.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-download"></i></div>
+                <h3>PNG Export</h3>
+                <p>When your masterpiece is complete, export it natively using the canvas `.toDataURL()` API to generate a standard image file without a backend.</p>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <a href="studio.html" class="btn btn-primary btn-large">Launch Studio <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio - Pixel Art Studio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="app-mode">
+    
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+        <div class="nav-brand">
+            <i class="fa-solid fa-palette"></i> Pixel Art Studio
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="studio.html" class="active">Studio</a>
+            <a href="settings.html">Settings</a>
+        </div>
+    </nav>
+
+    <div class="app-layout">
+        
+        <!-- Left Toolbar (Tools) -->
+        <aside class="toolbar-left">
+            
+            <div class="tool-section">
+                <div class="tool-label">Primary Color</div>
+                <input type="color" id="color-picker" value="#000000" class="color-picker-input">
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="tool-section">
+                <div class="tool-label">Tools</div>
+                <button class="tool-btn active" id="tool-pen" title="Pen Tool (P)">
+                    <i class="fa-solid fa-pencil"></i>
+                </button>
+                <button class="tool-btn" id="tool-eraser" title="Eraser Tool (E)">
+                    <i class="fa-solid fa-eraser"></i>
+                </button>
+                <button class="tool-btn" id="tool-bucket" title="Paint Bucket (B)">
+                    <i class="fa-solid fa-fill-drip"></i>
+                </button>
+            </div>
+
+        </aside>
+
+        <!-- Main Workspace (Canvas) -->
+        <main class="workspace-area">
+            
+            <div class="canvas-wrapper checkerboard-bg" id="canvas-wrapper">
+                <canvas id="art-canvas"></canvas>
+                <!-- We will overlay a CSS grid or draw grid lines on a secondary canvas if needed. For crispness, CSS background is best -->
+                <div class="canvas-grid-overlay" id="grid-overlay"></div>
+            </div>
+
+        </main>
+
+        <!-- Right Toolbar (Settings & Actions) -->
+        <aside class="toolbar-right">
+            
+            <div class="settings-panel">
+                <h3>Canvas Settings</h3>
+                
+                <div class="control-group mt-4">
+                    <label for="grid-size">Grid Size</label>
+                    <select id="grid-size" class="custom-select">
+                        <option value="16">16 x 16</option>
+                        <option value="32" selected>32 x 32</option>
+                        <option value="64">64 x 64</option>
+                    </select>
+                </div>
+                
+                <div class="control-group mt-4">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="toggle-grid" checked>
+                        <span class="checkmark"></span>
+                        Show Grid Lines
+                    </label>
+                </div>
+
+                <div class="divider mt-4"></div>
+
+                <div class="control-group mt-4">
+                    <button class="btn btn-secondary btn-full" id="btn-clear">
+                        <i class="fa-solid fa-trash"></i> Clear Canvas
+                    </button>
+                </div>
+
+                <div class="control-group mt-3">
+                    <button class="btn btn-primary btn-full" id="btn-download">
+                        <i class="fa-solid fa-download"></i> Export PNG
+                    </button>
+                </div>
+
+            </div>
+
+        </aside>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
